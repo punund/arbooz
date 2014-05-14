@@ -1,0 +1,23 @@
+{ "name": "arbooz"
+, "version": "0.0.1"
+, "author": "Iļja Ketrs"
+, "description": "Angular, Bootstrap, zappajs, Blade, Stylus skeleton app"
+, "private": false
+, "dependencies": 
+  { "blade": "*"
+  , "coffee-script": "*"
+  , "connect-assets": "*"
+  , "stylus": "*"
+  , "zappajs": "*"
+  }
+, "devDependencies": 
+  { "node-dev": "*"
+  }
+, "engines":
+  { "node": "0.10"
+  , "npm": "1.2"
+  }
+, "scripts":
+  { "test": "make test"
+  }
+}

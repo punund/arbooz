@@ -1,0 +1,35 @@
+!!! 5
+html
+  head
+    title Arbooz
+    meta(name='description', content='')
+    meta(name='keywords', content='')
+
+    link(href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type="text/css")
+    != css('main')
+
+    script(src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular.min.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-route.js")
+    != js('ui-bootstrap-tpls-0.11.0.min')
+    != js('main') 
+
+  body(ng-app='arbooz')
+    .navbar.navbar-default(role='navigation')
+      .container
+        .navbar-header
+          button.navbar-toggle(
+              type='button'
+              data-toggle='collapse'
+              data-target='.navbar-collapse'
+              ng-click="isCollapsed = !isCollapsed"
+              ng-init="isCollapsed = true"
+              )
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          .navbar-brand
+            | Arbooz
+        div.collapse.navbar-collapse(ng-controller='HeaderController' collapse="isCollapsed")
+          ul.nav.navbar-nav(az-menu)
+
+    .container(ng-view)
