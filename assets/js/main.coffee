@@ -28,10 +28,8 @@ angular.module('arbooz', ['ngRoute', 'ui.bootstrap'])
     controller: 'az-shop'
 ]
 
-.config ($locationProvider) ->
+.config ($locationProvider, $routeProvider, azHeader) ->
   $locationProvider.html5Mode on
-
-.config ($routeProvider, azHeader) ->
   for item in azHeader
     $routeProvider.when item.uri, item.route
 
