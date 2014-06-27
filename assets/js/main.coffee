@@ -12,7 +12,7 @@ angular.module('arbooz', ['ngRoute', 'ui.bootstrap'])
   route:
     template: '''
       <h2>You are in the street</h2>
-      <p>This comes from an inline template.</p>
+      <p>This comes from an inline Angular template.</p>
       '''
 ,
   title: 'Gym'
@@ -26,6 +26,11 @@ angular.module('arbooz', ['ngRoute', 'ui.bootstrap'])
   route:
     templateUrl: '/partial/shop'
     controller: 'az-shop'
+,
+  title: 'School'
+  uri: '/school'
+  route:
+    templateUrl: '/partial/school?user=xxx'
 ]
 
 .config ($locationProvider, $routeProvider, azHeader) ->
@@ -40,7 +45,6 @@ angular.module('arbooz', ['ngRoute', 'ui.bootstrap'])
   $http.get '/api/shop'
   .success (data, status, headers) ->
     $scope.data = data
-    console.log data
   .error (data, status, headers) ->
     console.error status
 

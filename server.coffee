@@ -3,6 +3,26 @@ os = require 'os'
 require('zappajs') port: 3000, ->
 
   @use require('connect-assets')()
+  @use 'static'
+  @use 'logger'
+
+
+  @view '/partial/school.blade': '''
+    h2 ZappaJS
+    div
+      | has inline templates, too.  Define with 
+      span.text-primary @view
+      | :
+    pre
+      |
+        @view '/partial/school.blade': ''\'
+          h2 ZappaJS
+          div
+            | has inline templates, too.  Define with 
+            span.text-primary @view
+            | :
+      p ...
+    '''
 
   @get
     '/partial/:name': ->
