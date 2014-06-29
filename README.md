@@ -10,4 +10,5 @@ Minimal boilerplate code for:
 * calls to Angular models
 * AJAX API calls
 * inline Angular templates
+* inline Zappajs templates
 * images, backgrounds, favicon
