@@ -2,9 +2,9 @@ os = require 'os'
 
 require('zappajs') port: 3000, ->
 
-  @use require('connect-assets')()
-  @use 'static'
   @use 'logger'
+  @use require('connect-assets')()
+  @use static: 'assets'
 
 
   @view '/partial/school.blade': '''
