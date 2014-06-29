@@ -30,7 +30,7 @@ angular.module('arbooz', ['ngRoute', 'ui.bootstrap'])
   title: 'School'
   uri: '/school'
   route:
-    templateUrl: '/partial/school?user=xxx'
+    templateUrl: '/partial/school?framework=ZappaJS'
 ]
 
 .config ($locationProvider, $routeProvider, azHeader) ->

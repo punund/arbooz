@@ -6,23 +6,30 @@ require('zappajs') port: 3000, ->
   @use require('connect-assets')()
   @use static: 'assets'
 
+  @enable 'databag'
 
-  @view '/partial/school.blade': '''
-    h2 ZappaJS
+
+  @view '/partial/school.blade': """
+    h2= params.framework
     div
-      | has inline templates, too.  Define with 
+      | has inline templates, too.  This view is defined with 
       span.text-primary @view
       | :
     pre
       |
-        @view '/partial/school.blade': ''\'
-          h2 ZappaJS
+        @view '/partial/school.blade': '''
+          h2= params.framework
           div
-            | has inline templates, too.  Define with 
+            | has inline templates, too.  This view is defined with 
             span.text-primary @view
             | :
       p ...
-    '''
+    div
+      | This was called by a client route as: 
+      span.text-primary /partial/school?framework=ZappaJS
+      | . Note the parameter.
+
+    """
 
   @get
     '/partial/:name': ->
