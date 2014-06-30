@@ -39,7 +39,7 @@ require('zappajs') port: 3000, ->
       @json
         string: @params.name
         time: Date()
-        os: os.platform()
+        os: os.platform() + ' ' + os.release()
         cpu: os.cpus()[0].model
 
     '*': ->
