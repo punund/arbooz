@@ -1,36 +1,48 @@
 !!! 5
 html
-  head
-    title Arbooz
-    meta(name='description', content='')
-    meta(name='keywords', content='')
+   head
+      title ИнфоШелл тест
 
-    link(rel="icon" type="image/ico" href="/favicon.ico?v=2")
-    link(href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type="text/css")
-    != css('main')
+      link(href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"  rel="stylesheet")
+      link(href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet")
 
-    script(src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular.min.js")
-    script(src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-route.js")
-    != js('ui-bootstrap-tpls-0.11.0.min')
-    != js('main') 
+      script(src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js")
+      script(src="/zappa/simple.js")
+      script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js")
 
-  body(ng-app='arbooz')
-    .navbar.navbar-default(role='navigation')
+      script(src="/main.js")
+
+   body
       .container
-        .navbar-header
-          button.navbar-toggle(
-              type='button'
-              data-toggle='collapse'
-              data-target='.navbar-collapse'
-              ng-click="isCollapsed = !isCollapsed"
-              ng-init="isCollapsed = true"
-              )
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          .navbar-brand
-            | Arbooz
-        div.collapse.navbar-collapse(ng-controller='HeaderController' collapse="isCollapsed")
-          ul.nav.navbar-nav(az-menu)
+         .row
+            h3.col-sm-12 Чат и лог
+         div(role="tabpanel")
+            ul.nav.nav-tabs(role="tablist")
+               li.active
+                  a(href="#chatty" data-toggle="tab" role="tab") Чат
+               li(data-toggle="tab")
+                  a(href="#loggy" data-toggle="tab" role="tab") Лог
+               li(data-toggle="tab")
+                  a(href="#source" data-toggle="tab" role="tab") Исходный текст сервера
 
-    .container(ng-view)
+         .tab-content
+            .tab-pane.active#chatty(role="tab-pane")
+               p
+               #chat
+               .row
+                  p
+                  form#form.col-sm-6
+                     .input-group
+                        .input-group-addon
+                           span#nick
+                           | :
+                        input.form-control#phrase(type="text")
+
+            .tab-pane#loggy(role="tab-pane")
+               #log
+
+            .tab-pane#source(role="tab-pane")
+               h4 chat.coffee
+               pre
+                  code.coffee#src
+

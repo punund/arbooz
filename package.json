@@ -1,23 +1,25 @@
-{ "name": "arbooz"
-, "version": "0.0.1"
-, "author": "Iļja Ketrs"
-, "description": "Angular, Bootstrap, zappajs, Blade, Stylus skeleton app"
-, "private": false
-, "dependencies": 
-  { "blade": "*"
-  , "coffee-script": "*"
-  , "connect-assets": "*"
-  , "stylus": "*"
-  , "zappajs": "*"
-  }
-, "devDependencies": 
-  { "node-dev": "*"
-  }
-, "engines":
-  { "node": "0.10"
-  , "npm": "1.2"
-  }
-, "scripts":
-  { "test": "make test"
+{
+  "name": "infoshell-test",
+  "version": "0.0.1",
+  "author": "Iļja Ketrs",
+  "description": "test assignment",
+  "private": true,
+  "dependencies": {
+    "blade": "^3.3.0",
+    "bluebird": "^2.5.0",
+    "chance": "^0.7.1",
+    "coffee-script": "^1.8.0",
+    "promised-mongo": "^0.11.1",
+    "zappajs": "^1.0.5"
+  },
+  "devDependencies": {
+    "node-dev": "*"
+  },
+  "engines": {
+    "node": "0.10",
+    "npm": "1.2"
+  },
+  "scripts": {
+    "start": "node_modules/.bin/coffee chat.coffee"
   }
 }

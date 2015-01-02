@@ -1,14 +1,21 @@
-Skeleton app in node.js
+Тестовое задание для ИнфоШелл
 ===
-using angular, bootstrap, zappajs, stylus, blade, coffeescript
+
+Системные требования
 ---
 
-It also uses methods from [UI Boostrap](http://angular-ui.github.io/bootstrap/) project.
+* POSIX система
+* mongodb сервер локально
+* интернет (для ресурсов из CDN-ов и установки пакетов)
 
-Minimal boilerplate code for:
+Как запустить
+---
 
-* calls to Angular models
-* AJAX API calls
-* inline Angular templates
-* inline Zappajs templates
-* images, backgrounds, favicon
+* распаковать
+* npm install
+* npm start
+
+Как использовать
+---
+
+http://<сервер>:3000
