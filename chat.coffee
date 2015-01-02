@@ -11,7 +11,7 @@ fs = require('bluebird').promisifyAll require 'fs'
 
 chatlog = mongo('mongodb://localhost/test').collection 'chatlog'
 
-require('zappajs') ->
+require('zappajs') port: process.env.PORT or 3000, ->
 
    @locals.clients = 0
 
