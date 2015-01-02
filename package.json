@@ -9,6 +9,7 @@
     "bluebird": "^2.5.0",
     "chance": "^0.7.1",
     "coffee-script": "^1.8.0",
+    "connect-assets": "^4.3.3",
     "promised-mongo": "^0.11.1",
     "zappajs": "^1.0.5"
   },
